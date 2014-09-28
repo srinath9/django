@@ -31,7 +31,7 @@ class ProductImage(models.Model):
 	def __unicode__(self):
 		return str(self.title)
 
-class tag(models.Model):
+class Tag(models.Model):
 	product = models.ForeignKey(Product)
 	tag = models.CharField(max_length=20)
 	slug = models.SlugField()
