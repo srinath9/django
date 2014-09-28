@@ -24,7 +24,7 @@ class ProductAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug":('title',)}
 	#prepopulated_fields has to be in tuples and hence keep the commas otherwise error will apper
 	readonly_fields = ['categories','live_links','description']
-	fields = ['title','slug','live_links']
+#	fields = ['title','slug','live_links']
 	class Meta:
 		model = Product
 

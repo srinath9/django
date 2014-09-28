@@ -4,6 +4,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+	url(r'^$','products.views.list_all', name ="all_products"),
+	url(r'^single/$','products.views.single', name ="product"),
     # Examples:
     # url(r'^$', 'dj_pro.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),

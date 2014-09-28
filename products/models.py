@@ -13,6 +13,7 @@ class Product(models.Model):
 	order = models.IntegerField(default = 0)
 	timestamp = models.DateTimeField(auto_now_add = True)
 	updated = models.DateTimeField(auto_now_add = False)
+	active = models.BooleanField(default = True)
 
 	def __unicode__(self):
 		return str(self.title)

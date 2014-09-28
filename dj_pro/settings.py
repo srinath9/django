@@ -93,3 +93,11 @@ STATIC_ROOT ='/home/srinath/dj_pro/static/static-only/'
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    '/home/srinath/dj_pro/static/static/',
+    )
+
+TEMPLATE_DIRS =(
+    '/home/srinath/dj_pro/static/templates/'
+    )
