@@ -5,5 +5,11 @@
 {% block content %}
 
 {{product}}
-
+{%for cat in categories %}
+<li>{cat}</li>
+{%endfor%}
+{{edit}}
+{%if edit%}
+<a href="#">edit it</a>
+{%endif%}
 {% endblock %}

@@ -10,8 +10,17 @@ def list_all(request):
 
 def single(request,slug):
 	product = Product.objects.get(slug=slug)
-	context = {
-	"product":product,
-	}
+	
+	if request.user == product.user:
+		categories = product.category_set.all()
+		context = {
+		"product":product,
+		"categories" : categories,
+		"edit":True,
+		}
+		print locals()
 
-	return render_to_response("products/single.html", context, context_instance=RequestContext(request))
+		return render_to_response("products/single.html", context, context_instance=RequestContext(request))
+
+	else:
+		return render_to_response("products/single.html",context, context_instance=RequestContext(request))
