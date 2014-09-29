@@ -1,14 +1,22 @@
 {%extends "base.html" %}
-
+{% load staticfiles %}
 
 
 {% block content %}
 
 {{product}}
+{{product.description}}
+{%for abc in images2%}
+{{abc.image}}<br>
+<div>
+<img src="{{MEDIA_URL}}{{abc.image}}" width="100px" />
+</div>
+{%endfor%}
+
 {%for cat in categories %}
 <li>{cat}</li>
 {%endfor%}
-{{edit}}
+
 {%if edit%}
 <a href="#">edit it</a>
 {%endif%}

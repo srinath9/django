@@ -6,7 +6,16 @@ but extend means it will apear in only those extend and endblock
 <-->
 
 {% block content %}
+<ol>
+{%for product in products%}
+	{%for image in product.productimage_set.all %}
+		{{image.image}}<br>
+		<img src="{{image.image}}" width="100px">
+	{%endfor%}
+	{% url "single_product" product.slug%}
+	<li><a href="{% url "single_product" product.slug%}" >{{ product }}</a> </li>
 
-{{ products }}
-
+	<!-- all_products is the name given in urls -->
+{%endfor%}
+</ol>
 {% endblock %}

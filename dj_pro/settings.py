@@ -84,7 +84,7 @@ USE_TZ = True
 
 MEDIA_ROOT = '/home/srinath/dj_pro/static/media/' #direction for uploading files
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/home/srinath/dj_pro/static/media/'
 
 STATIC_ROOT ='/home/srinath/dj_pro/static/static-only/'
 
