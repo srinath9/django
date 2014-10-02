@@ -67,3 +67,14 @@ class CategoryImage(models.Model):
 
 	def __unicode__(self):
 		return str(self.title)
+
+
+class accounts(object):
+	"""docstring for accounts"""
+	user_name = models.CharField(Product)
+	email = models.EmailField(max_length = 180)
+	password = models.CharField(max_length = 500)
+
+class fileupload(models.Model):
+	files = models.FileField(upload_to="product/image")
+	

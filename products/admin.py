@@ -12,7 +12,7 @@ class ProductImageInLine(admin.TabularInline):
 class CategoryImageInLine(admin.TabularInline):
 	model = CategoryImage
 #inline should be above just like  c lang
-
+ 
 class ProductAdmin(admin.ModelAdmin):
 	list_display = ('__unicode__','description','current_price','order','categories','live_links')  
 	#list_displlay is inside variable for displaying the connetn in admin page
